@@ -1,0 +1,41 @@
+{
+  "name": "aave_simulator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run clean && npm run build && env-cmd --no-override .env node dist/index.js",
+    "clean": "rm -rf ./db/* && rm -rf ./dist",
+    "lint": "eslint ./src --ext .js,.ts,.tsx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/damarnez/aave_simulation.git"
+  },
+  "author": "damarnez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/damarnez/aave_simulation/issues"
+  },
+  "homepage": "https://gitlab.com/damarnez/aave_simulation#readme",
+  "dependencies": {
+    "bignumber.js": "^9.0.1",
+    "env-cmd": "^8.0.2",
+    "ethers": "^5.0.17",
+    "ganache-cli": "^6.12.0",
+    "microjob": "^0.7.0",
+    "worker-farm": "^1.7.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.1",
+    "typechain": "^3.0.0",
+    "typescript": "^3.3.3",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.1.3"
+  }
+}
